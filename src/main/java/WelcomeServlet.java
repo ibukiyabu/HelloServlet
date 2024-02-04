@@ -26,7 +26,7 @@ public class WelcomeServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
 		request.setCharacterEncoding("UTF-8");
@@ -36,7 +36,7 @@ public class WelcomeServlet extends HttpServlet {
 		System.out.println(username);
 		
 		PrintWriter out = response.getWriter();
-		out.println("<html><head></head><body><br>"+username+"さん、ようこそ！</body></html>");
+		out.println("<html><head></head><body><br>" + username + "さん、ようこそ！</body></html>");
 
 	}
 
