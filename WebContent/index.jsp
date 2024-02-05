@@ -30,6 +30,8 @@
 	    <input type="password" name="password">
 	    <input type = "submit" value="送信">
 	    </form>
+	    
+	    <input type="button" value="MySQLServlet" onClick ="location.href='MySQLServlet'">
 
 </body>
 </html>
