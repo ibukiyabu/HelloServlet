@@ -1,6 +1,8 @@
 
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +29,19 @@ public class TestServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+		
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		
+		System.out.println(username);
+		System.out.println(password);
+		
+		PrintWriter out = response.getWriter();
+		
+		out.println("<html><head></head><body><br>"+ username +"<br>"+password+"</body></html>");
 	}
 
 	/**
@@ -35,7 +49,19 @@ public class TestServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		
+		System.out.println(username);
+		System.out.println(password);
+		
+		PrintWriter out = response.getWriter();
+		
+		out.println("<html><head></head><body><br>"+ username +"<br>"+password+"</body></html>");
+		
+		
+		
 	}
 
 }
