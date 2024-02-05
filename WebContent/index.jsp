@@ -16,7 +16,8 @@
 	<input type="button" value = "問い合わせ"
 	    onClick="location.href='inquiry.jsp'">
 	    
-	   GET通信
+	    
+	    <br>GET通信
 	    <form method ="get" action="TestServlet">
 	    <input type="text" name="username">
 	    <input type="password" name="password">
