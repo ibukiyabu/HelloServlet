@@ -59,7 +59,7 @@ public class MySQLServlet extends HttpServlet {
 
 	        while(rs.next()){
 	            int userId = rs.getInt("user_id");
-	            String userName = rs.getString("user_name");
+	            String userName = rs.getString("username");
 	            String userPassword = rs.getString("password");
 
 	            out.println("<p>");
